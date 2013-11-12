@@ -1,6 +1,6 @@
-function Player() {
+function Player(name) { 
 	
-	// var name = name;
+	this.name = name;
 
 
 }

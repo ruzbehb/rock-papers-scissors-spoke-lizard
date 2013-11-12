@@ -1,0 +1,53 @@
+<html>
+
+<head>
+<h1> Rock, Scissors, Paper, Lizard, Spock</h2>
+<link href="./public/stylesheets/application.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+<div class="player">
+	<p align="center">Make a guess</p>
+	<ul align="center">
+		<button data-pick="scissors">Scissors</button>
+		<button data-pick="paper">Paper</button>
+		<button data-pick="rock">Rock</button>
+		<button data-pick="lizard">Lizard</button>
+		<button data-pick="spock">Spock</button>
+	</ul>
+</div>
+
+
+<div class="computer">
+	<p align="center">Computer's move</p>
+
+</div>
+
+<div id="output"></div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="lib/RockPaperScissors.js"></script>
+<script>
+	var player = new Player('player');
+	var computer = new Player('computer');
+	game = new Game(player, computer);
+	$('button').on('click', function() {
+	player.picks($(this).data('pick'));
+	computer.picks('rock')
+	var winner = game.winner();
+	console.log(winner);
+	if (winner == null) {
+		$('#output').html("<h2> It's a draw, biatch </h2>");
+	}
+	else {
+	$('#output').html("<h2>" + winner.name + " wins </h2>");
+	}
+	})
+	
+	
+</script>
+
+</body>
+
+</html>

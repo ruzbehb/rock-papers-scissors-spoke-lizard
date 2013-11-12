@@ -1,0 +1,15 @@
+
+div.computer, div.player {
+  vertical-align: text-top;
+  display: inline-block;
+  padding: 5px;
+  width: 450px;
+  margin: 10px;
+}
+
+body {
+  font-family: Arial;
+  
+}
+
+
