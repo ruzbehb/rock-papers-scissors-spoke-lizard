@@ -1,0 +1,1 @@
+lizard rock {"name"=>"computer", "pick"=>"rock", "picks"=>"undefined"}
